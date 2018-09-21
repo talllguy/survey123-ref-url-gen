@@ -7,11 +7,11 @@
   <title>Survey123 URL Converter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto|Roboto+Mono" rel="stylesheet">
-  
+
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
 
-  
-  
+
+
 </head>
 
 <body>
@@ -21,7 +21,7 @@
   <p class="lead">A conversion script to generate Survey123 URLs for web maps</p>
   <hr class="my-4">
   <p>See <a target="_blank" href="https://community.esri.com/groups/survey123/blog/2016/07/30/understanding-survey123s-custom-url-scheme">the Esri Survey123 blog post on the Survey123 custom URL scheme</a> for more information.
-  <p>By <a target="_blank" href="https://www.linkedin.com/in/elliottplack/">Elliott Plack</a>. 
+  <p>By <a target="_blank" href="https://www.linkedin.com/in/elliottplack/">Elliott Plack</a>.
     <a target="_blank" href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
   </p>
 </div>
@@ -44,6 +44,11 @@
           <input type="text" class="form-control" id="inputFK" aria-describedby="inputFKHelp" placeholder="FK_SOME_ID">
           <small id="inputFKHelp" class="form-text text-muted">Enter the <abbr title="Foreign Key" class="initialism">FK</abbr> field name <strong>that Survey123 uses</strong>. It should receive the primary key from Collector referenced above.</small>
         </div>
+        <div class="form-group">
+          <label for="inputT">Button Text</label>
+          <input type="text" class="form-control" id="inputT" aria-describedby="inputTHelp" placeholder="Do Survey">
+          <small id="inputTHelp" class="form-text text-muted">Enter the text for the button.</small>
+        </div>
         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="generateSurvey123url()">Generate</button>
       </div>
       <div class="col-md-8">
@@ -61,8 +66,8 @@
     </div>
   </form>
 </div>
-  
-  
+
+
 
     <script  src="js/index.js"></script>
 
