@@ -21,7 +21,7 @@
   <p class="lead">A conversion script to generate Survey123 URLs for web maps</p>
   <hr class="my-4">
   <p>See <a target="_blank" href="https://community.esri.com/groups/survey123/blog/2016/07/30/understanding-survey123s-custom-url-scheme">the Esri Survey123 blog post on the Survey123 custom URL scheme</a> for more information.
-  <p>By <a target="_blank" href="https://www.linkedin.com/in/elliottplack/">Elliott Plack</a>.
+  <p>By <a target="_blank" href="https://www.linkedin.com/in/elliottplack/">Elliott Plack</a> and <a target="_blank" href="https://github.com/talllguy/survey123-ref-url-gen/graphs/contributors">GitHub contributors</a>.
     <a target="_blank" href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
   </p>
 </div>
@@ -37,12 +37,12 @@
         <div class="form-group">
           <label for="inputPK">Primary Key</label>
           <input type="text" class="form-control" id="inputPK" aria-describedby="inputPKHelp" placeholder="SOME_ID">
-          <small id="inputPKHelp" class="form-text text-muted">Enter the <abbr title="Primary Key" class="initialism">PK</abbr> field name <strong>that Collector uses</strong>. It will be populated in the Survey123 form to maintain referential integrity.</small>
+          <small id="inputPKHelp" class="form-text text-muted">Enter the <abbr title="Primary Key" class="initialism">PK</abbr> field name <strong>that Collector uses</strong>. It will be populated in the Survey123 form to maintain referential integrity.  Separate multiple keys by comma (e.g. PK1,PK2,PK3).</small>
         </div>
         <div class="form-group">
           <label for="inputFK">Foreign Key</label>
           <input type="text" class="form-control" id="inputFK" aria-describedby="inputFKHelp" placeholder="FK_SOME_ID">
-          <small id="inputFKHelp" class="form-text text-muted">Enter the <abbr title="Foreign Key" class="initialism">FK</abbr> field name <strong>that Survey123 uses</strong>. It should receive the primary key from Collector referenced above.</small>
+          <small id="inputFKHelp" class="form-text text-muted">Enter the <abbr title="Foreign Key" class="initialism">FK</abbr> field name <strong>that Survey123 uses</strong>. It should receive the primary key from Collector referenced above.  Separate multiple keys by comma (e.g. FK1,FK2,FK3).</small>
         </div>
         <div class="form-group">
           <label for="inputT">Button Text</label>
