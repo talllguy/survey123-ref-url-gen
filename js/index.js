@@ -14,12 +14,25 @@ function generateSurvey123url() {
     var buttonParems = '&f=Roboto-Bold&ts=24&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=6aa84f&ebgc=274e13&shs=1&shc=444&sho=s" alt="'
     var buttonEnd = '"></a>'
 
-    var result = prefixURL.concat(surveyID,fieldAdd,FK,pkTransitPre,PK,pkTransitPost);
+    var FKFields = FK.split(",");
+    var PKFields = PK.split(",");
 
-    var buttonOut = buttonPre.concat(result,buttonImg,T,buttonParems,TSPACE,buttonEnd);
+    if ((FK ? !PK : PK ) || FKFields.length !== PKFields.length) {
+      alert("Mismatch Number of FK and PK fields");
+      document.getElementById('resultURL').value = "";
+      document.getElementById('buttonGen').value = "";
+    } else {
+      var fields = "";
+      for(var i = 0; i < FKFields.length; i++) {
+        fields = fields.concat(fieldAdd, FKFields[i], pkTransitPre, PKFields[i], pkTransitPost);
+      }
+      var result = prefixURL.concat(surveyID,fields);
 
-    document.getElementById('resultURL').value = result;
-    document.getElementById('buttonGen').value = buttonOut;
+      var buttonOut = buttonPre.concat(result,buttonImg,T,buttonParems,TSPACE,buttonEnd);
+
+      document.getElementById('resultURL').value = result;
+      document.getElementById('buttonGen').value = buttonOut;
+  }
 }
 
 function copyButton() {
