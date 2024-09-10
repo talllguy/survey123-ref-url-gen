@@ -54,14 +54,15 @@
       <div class="col-md-8">
         <div class="form-group">
           <label for="resultURL">Raw URL</label>
-          <input type="text" class="form-control" id="resultURL" readonly>
+          <!-- Add onclick to enable copy functionality -->
+          <input type="text" class="form-control" id="resultURL" onclick="copyToClipboard('resultURL')" readonly>
+          <small class="form-text text-muted">Click to copy the URL</small>
         </div>
         <div class="form-group">
           <label for="buttonGen">Button URL</label>
-          <textarea class="form-control" id="buttonGen" aria-describedby="buttonGenHelp" readonly rows=5></textarea>
-          <small id="buttonGenHelp" class="form-text text-muted">Put this HTML in the web map pop-up HTML area to display a survey button with the generated URL link.</small>
-        </div>
-        <button type="button" class="btn-success btn-lg btn-block" onclick="copyButton()">Copy Button Code</button>
+          <!-- Add onclick to enable copy functionality -->
+          <textarea class="form-control" id="buttonGen" aria-describedby="buttonGenHelp" onclick="copyToClipboard('buttonGen')" readonly rows=5></textarea>
+          <small id="buttonGenHelp" class="form-text text-muted">Click to copy the button code. Put this HTML in the web map pop-up HTML area to display a survey button with the generated URL link.</small>
       </div>
     </div>
   </form>
