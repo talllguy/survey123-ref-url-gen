@@ -48,3 +48,16 @@ function copyButton() {
   /* alert show */
   $(".alert").show()
 }
+
+// function that allows users to click inside of text boxes to copy the url/html
+
+function copyToClipboard(elementId) {
+  var copyText = document.getElementById(elementId);
+  copyText.select();  // Select the text in the input/textarea
+  copyText.setSelectionRange(0, 99999);  // For mobile devices
+
+  document.execCommand("copy");  // Copy the text
+
+  // Provide a simple confirmation (e.g., an alert or a custom message)
+  alert("Copied the text: " + copyText.value);
+}
